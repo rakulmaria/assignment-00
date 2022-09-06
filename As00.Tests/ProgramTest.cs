@@ -9,7 +9,7 @@ public class ProgramTest
         var sut = new Program();
 
         // Act
-        bool result = sut.IsLeapYear(16);
+        bool result = sut.IsLeapYear(1904);
 
         // Assert
         result.Should().BeTrue();
@@ -22,7 +22,7 @@ public class ProgramTest
         var sut = new Program();
 
         // Act
-        bool result = sut.IsLeapYear(81);
+        bool result = sut.IsLeapYear(1905);
 
         // Assert
         result.Should().BeFalse();
@@ -36,7 +36,7 @@ public class ProgramTest
         var sut = new Program();
 
         // Act
-        bool result = sut.IsLeapYear(400);
+        bool result = sut.IsLeapYear(1600);
 
         // Assert
         result.Should().BeTrue();
@@ -49,7 +49,7 @@ public class ProgramTest
         var sut = new Program();
 
         // Act
-        bool result = sut.IsLeapYear(281);
+        bool result = sut.IsLeapYear(1900);
 
         // Assert
         result.Should().BeFalse();
@@ -83,29 +83,69 @@ public class ProgramTest
     }
 
     [Fact]
-    public void Is_Leap_Year_With_Input_Print_nay()
+    public void YayOrNay_Print_nay()
     {
         // Arrange
         var sut = new Program();
 
         // Act
-        string result = sut.yayOrNay(false);
+        string result = sut.YayOrNay(false);
 
         // Assert
         result.Should().Be("nay");
     }
 
     [Fact]
-    public void Is_Leap_Year_With_Input_Print_yay()
+    public void YayOrNay_Print_yay()
     {
         // Arrange
         var sut = new Program();
 
         // Act
-        string result = sut.yayOrNay(true);
+        string result = sut.YayOrNay(true);
 
         // Assert
         result.Should().Be("yay");
     }
+
+    // [Fact]
+    // public void ErrorHandling_Invalid_Characters_Input()
+    // {
+    //     // Arrange
+    //     var sut = new Program();
+
+    //     // Act
+    //     bool result = sut.ErrorHandling("#zSo0p");
+
+    //     // Assert
+    //     result.Should().BeFalse();
+
+    // }
+    
+    // [Fact]
+    // public void ErrorHandling_Invalid_Number_Input()
+    // {
+    //     // Arrange
+    //     var sut = new Program();
+
+    //     // Act
+    //     bool result = sut.ErrorHandling("1480");
+
+    //     // Assert
+    //     result.Should().BeFalse();
+    // }
+
+    // [Fact]
+    // public void ErrorHandling_Valid_Input()
+    // {
+    //     // Arrange
+    //     var sut = new Program();
+
+    //     // Act
+    //     bool result = sut.ErrorHandling("1996");
+
+    //     // Assert
+    //     result.Should().BeTrue();
+    // }
     
 }
