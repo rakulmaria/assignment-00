@@ -80,6 +80,32 @@ public class ProgramTest
 
         // Assert
         result.Should().BeFalse();
-
     }
+
+    [Fact]
+    public void Is_Leap_Year_With_Input_Print_nay()
+    {
+        // Arrange
+        var sut = new Program();
+
+        // Act
+        string result = sut.yayOrNay(false);
+
+        // Assert
+        result.Should().Be("nay");
+    }
+
+    [Fact]
+    public void Is_Leap_Year_With_Input_Print_yay()
+    {
+        // Arrange
+        var sut = new Program();
+
+        // Act
+        string result = sut.yayOrNay(true);
+
+        // Assert
+        result.Should().Be("yay");
+    }
+    
 }
