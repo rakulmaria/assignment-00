@@ -9,7 +9,7 @@ public class ProgramTest
         var sut = new Program();
 
         // Act
-        bool result = sut.IsLeapYear(1904);
+        bool result = sut.IsLeapYear("1904");
 
         // Assert
         result.Should().BeTrue();
@@ -22,7 +22,7 @@ public class ProgramTest
         var sut = new Program();
 
         // Act
-        bool result = sut.IsLeapYear(1905);
+        bool result = sut.IsLeapYear("1905");
 
         // Assert
         result.Should().BeFalse();
@@ -36,7 +36,7 @@ public class ProgramTest
         var sut = new Program();
 
         // Act
-        bool result = sut.IsLeapYear(1600);
+        bool result = sut.IsLeapYear("1600");
 
         // Assert
         result.Should().BeTrue();
@@ -49,7 +49,7 @@ public class ProgramTest
         var sut = new Program();
 
         // Act
-        bool result = sut.IsLeapYear(1900);
+        bool result = sut.IsLeapYear("1900");
 
         // Assert
         result.Should().BeFalse();
@@ -63,7 +63,7 @@ public class ProgramTest
         var sut = new Program();
 
         // Act
-        bool result = sut.IsLeapYear(2000);
+        bool result = sut.IsLeapYear("2000");
 
         // Assert
         result.Should().BeTrue();
@@ -76,7 +76,7 @@ public class ProgramTest
         var sut = new Program();
 
         // Act
-        bool result = sut.IsLeapYear(1700);
+        bool result = sut.IsLeapYear("1700");
 
         // Assert
         result.Should().BeFalse();
