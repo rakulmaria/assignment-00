@@ -7,17 +7,11 @@ public class Program
         var p = new Program();
 
         var input = Console.ReadLine();
-
-        var year = Convert.ToInt16(input);
-        Console.WriteLine("one");
-
+        var year = Int32.Parse(input);
         var tmp = p.IsLeapYear(year);
-
         var res = p.yayOrNay(tmp);
-        Console.WriteLine("two");
 
         Console.WriteLine(res);
-        Console.WriteLine("three");
 
     }
     public bool IsLeapYear(int year)
@@ -32,12 +26,8 @@ public class Program
     }
 
     public string yayOrNay(bool ans) {
-        string s = "";
-
-        if(ans == true) s = "yay";
-        else s = "nay";
-
-        return s;
+        if(ans == true) return "yay";
+        else return "nay";
     }
 
 }
