@@ -5,13 +5,11 @@ public class Program
     public static void Main(string[] args) 
     {
         var p = new Program();
-
         try 
         {
             var input = Console.ReadLine();
-            var tmp = p.IsLeapYear(input);
-            var res = p.YayOrNay(tmp);
-            Console.WriteLine(res);
+            var result = p.IsLeapYear(input);
+            Console.WriteLine(p.YayOrNay(result));
         }
         catch (Exception e)
         {
@@ -45,17 +43,5 @@ public class Program
         if(ans == true) return "yay";
         else return "nay";
     }
-
-    // public bool ErrorHandling(string tmp) 
-    // {
-    //     bool = false;
-    //     try {
-
-
-    //     } catch (ArgumentOutOfRangeException e) 
-    //     {
-    //         WriteLine($"Error: {e.Message}");
-    //     }
-    // }
 
 }
