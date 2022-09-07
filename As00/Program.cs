@@ -17,6 +17,7 @@ public class Program
         }
 
     }
+
     public bool IsLeapYear(string input)
     {
         int val;
